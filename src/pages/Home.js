@@ -14,8 +14,8 @@ function Home() {
 
   useEffect(() => {
     dispatch(getHomePageVideos(false));
-    console.log(videos);
   }, [dispatch]);
+
   return (
     <div className='max-h-screen overflow-auto'>
       <div style={{height:"7.5vh"}}>
