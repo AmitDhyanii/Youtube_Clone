@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { parseData } from "../../utils/parseData";
 
+
 const API_KEY = process.env.YOUTUBE_API_KEY;
 export const getHomePageVideos = createAsyncThunk(
     "youtube/App/homePageVideos",
@@ -15,7 +16,8 @@ export const getHomePageVideos = createAsyncThunk(
 
         const parseData = await parseData(items);
             
-        return {parseData:[...videos,...parseData],nextPageToken:nextPageTokenFromState}
+        return {parseData:[...videos,...parseData],nextPageToken:nextPageTokenFromState};
             
     }
 )
+
